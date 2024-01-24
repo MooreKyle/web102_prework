@@ -197,5 +197,16 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 const [firstGame, secondGame, ...restOfGames] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
-
 // do the same for the runner up item
+
+// Create a new element for the top funded game's name
+const firstGameNameElement = document.createElement("h2");
+firstGameNameElement.textContent = firstGame.name;
+
+// Create a new element for the second most funded game's name
+const secondGameNameElement = document.createElement("h2");
+secondGameNameElement.textContent = secondGame.name;
+
+// Append the elements to their respective containers
+firstGameContainer.appendChild(firstGameNameElement);
+secondGameContainer.appendChild(secondGameNameElement);
